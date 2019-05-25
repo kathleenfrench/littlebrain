@@ -1,0 +1,40 @@
+**/*.pyc
+*.idea
+__pycache__/
+.pytest_cache/
+*$py.class
+
+include/
+*.pickle
+
+.venv
+env/
+venv/
+ENV/
+*.env
+
+# packaging files
+.Python
+lib/
+dist/
+*.egg-info/
+*.egg
+.eggs
+
+# installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# os generated
+.DS_Store
+.DS_Store?
+
+# compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+*.brn
