@@ -4,4 +4,4 @@ install:
 	@pip install -r requirements.txt
 
 small_talk:
-	@python lb.py
+	@python littlebrain.py
