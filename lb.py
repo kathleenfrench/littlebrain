@@ -46,7 +46,7 @@ class LittleBrain():
             cmds.Commands(split_message)
         else:
             bot_response = self.kernel.respond(message)
-            print(self.t.blue(bot_response))
+            print(self.t.blue(bot_response).lower().strip())
 
 
 if __name__ == '__main__':
