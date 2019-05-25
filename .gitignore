@@ -38,3 +38,5 @@ pip-delete-this-directory.txt
 *.so
 
 *.brn
+old/
+bin/

@@ -1,8 +1,0 @@
-.idea/
-logs/*
-!logs/.keep
-*.pyc
-venv/
-env/
-.DS_Store
-model_files/*.model
