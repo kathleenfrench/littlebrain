@@ -6,6 +6,7 @@ import requests
 from google.transit import gtfs_realtime_pb2
 from dotenv import load_dotenv, find_dotenv
 from protobuf_to_dict import protobuf_to_dict
+import hues
 
 ## API KEYS
 # load_dotenv(find_dotenv())
@@ -119,18 +120,18 @@ class MTA(object):
     if time_until_train > 3:
         print(f"""
     it's currently {time.strftime("%I:%M %p")}
-    the next Brooklyn-bound {train_line} train from
+    the next brooklyn-bound {train_line} train to
     {station} arrives in
-    {time_until_train} minutes at {time.strftime("%I:%M %p", time.localtime(nearest_arrival_time))}""")
+    {hues.huestr(str(time_until_train)).green.bold.colorized} minutes at {time.strftime("%I:%M %p", time.localtime(nearest_arrival_time))}""")
         print("")
     elif time_until_train <= 0:
         print(f"""
-    welp... You *just* missed the train. (╯°□°）╯︵ ┻━┻
+    welp... you *just* missed the train. (╯°□°）╯︵ ┻━┻
     Ah well, the next train will arrive at {time.strftime("%I:%M %p", time.localtime(second_arrival_time))}""")
         print("")
     else:
       print(f"""
-    HURRY UP YOU HAVE {time_until_train} MINUTES TO GET TO
+    HURRY UP YOU HAVE {hues.huestr(str(time_until_train)).red.bold.colorized} MINUTE(S) TO GET TO
     {station.upper()} IF YOU WANT TO GET HOME!
     THE TRAIN GETS IN AT {time.strftime("%I:%M %p", time.localtime(nearest_arrival_time))}""")
       print("")
