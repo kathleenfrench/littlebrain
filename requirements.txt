@@ -16,8 +16,6 @@ cymem==2.0.2
 dashing==0.1.dev0
 docopt==0.6.2
 docutils==0.14
-Flask==1.0.3
-Flask-SocketIO==4.0.0
 gtfs-realtime-bindings==0.0.5
 hues==0.2.2
 idna==2.8
