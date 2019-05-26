@@ -1,4 +1,4 @@
-## https://github.com/neoterix/nyc-mta-arrival-notify/blob/master/mta_notification.py
+##  credit to --> https://github.com/neoterix/nyc-mta-arrival-notify/blob/master/mta_notification.py
 
 import os, webbrowser
 import time # imports module for Epoch/GMT time conversion
@@ -124,11 +124,13 @@ class MTA(object):
     {station} arrives in
     {hues.huestr(str(time_until_train)).green.bold.colorized} minutes at {time.strftime("%I:%M %p", time.localtime(nearest_arrival_time))}""")
         print("")
+
     elif time_until_train <= 0:
         print(f"""
     welp... you *just* missed the train. (╯°□°）╯︵ ┻━┻
     Ah well, the next train will arrive at {time.strftime("%I:%M %p", time.localtime(second_arrival_time))}""")
         print("")
+        
     else:
       print(f"""
     HURRY UP YOU HAVE {hues.huestr(str(time_until_train)).red.bold.colorized} MINUTE(S) TO GET TO
