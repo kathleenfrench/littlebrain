@@ -37,6 +37,5 @@ pip-delete-this-directory.txt
 *.o
 *.so
 
-*.brn
 old/
 bin/
