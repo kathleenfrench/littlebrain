@@ -14,8 +14,9 @@ import hues
 from protobuf_to_dict import protobuf_to_dict
 
 TRAINS = {
-  "l8th": 'L01S',
-  "lorimer": 'L10N'
+  "8th": 'L01S',
+  "lorimer": 'L10N',
+  "union": 'L03S'
 }
 
 ## given it's nowhere in the docs, it's worth noting here...
@@ -109,10 +110,18 @@ class MTA(object):
 
     # This final part of the code checks the time to arrival and prints a few
     # different messages depending on the circumstance
-    if time_until_train > 3:
+    if time_until_train > 3 and station != 'lorimer':
         print(f"""
     it's currently {time.strftime("%I:%M %p")}
     the next brooklyn-bound {train_line} train to
+    {station} arrives in
+    {hues.huestr(str(time_until_train)).green.bold.colorized} minutes at {time.strftime("%I:%M %p", time.localtime(nearest_arrival_time))}""")
+        print("")
+
+    elif time_until_train > 3 and station == 'lorimer':
+        print(f"""
+    it's currently {time.strftime("%I:%M %p")}
+    the next manhattan-bound {train_line} train to
     {station} arrives in
     {hues.huestr(str(time_until_train)).green.bold.colorized} minutes at {time.strftime("%I:%M %p", time.localtime(nearest_arrival_time))}""")
         print("")
