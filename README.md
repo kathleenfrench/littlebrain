@@ -1,6 +1,6 @@
 # LITTLE BRAIN
 
-### WHAT IS LITTLE BRAIN?
+### WHAT (OR WHO) IS LITTLE BRAIN?
 
 little brain is a CLI tool/personal assistant/friend written in python
 
