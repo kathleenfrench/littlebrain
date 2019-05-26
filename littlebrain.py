@@ -60,7 +60,7 @@ class LittleBrain():
         message = input(">> ")
         split_message = message.split()
 
-        sentiment_score, mood = self.score_input_sentiment(message)
+        mood = self.score_input_sentiment(message)
 
         if message == "quit" or message == "exit" or message == "bye" or message == "gtg" or message == "ok bye": # exit from chat
           print(self.t.blue("k bye..."))
@@ -90,25 +90,26 @@ class LittleBrain():
 
   def score_input_sentiment(self, message):
     sentiment_compound = self.analyzer.polarity_scores(message)['compound']
-    score = None
+    # score = None
     mood = None
 
     if sentiment_compound <= -0.5:
-      score = MAX_NEGATIVE
+      # score = MAX_NEGATIVE
       mood = emoji.emojize(':confounded:', use_aliases=True)
     elif sentiment_compound > -0.5 and sentiment_compound < 0:
-      score = NEGATIVE
+      # score = NEGATIVE
       mood = emoji.emojize(':cold_sweat:', use_aliases=True)
     elif sentiment_compound == 0:
-      score = NEUTRAL
+      pass
+      # score = NEUTRAL
     elif sentiment_compound > 0 and sentiment_compound < 0.5:
-      score = POSITIVE
+      # score = POSITIVE
       mood = emoji.emojize(':grin:', use_aliases=True)
     else:
-      score = MAX_POSITIVE
+      # score = MAX_POSITIVE
       mood = emoji.emojize(':smile:', use_aliases=True)
 
-    return score, mood
+    return mood
 
   def improve_bot_response(self, response):
     dict = {}
