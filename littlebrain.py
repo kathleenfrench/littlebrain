@@ -11,12 +11,14 @@ from wikiapi import WikiApi
 
 LB_FACTS = {
   "name": "little brain",
-  "birthday": "yesterday, two seconds ago, tomorrow...really who's to say?",
+  "birthday": "...idk tbh",
   "location": "all over the place tbh",
   "gender": "depends on my mood",
   "age": "age ain't nothin but a number bb",
   "party": "all night long",
-  "size": "extremely tall"
+  "size": "extremely tall",
+  "looklike": "your biggest crush",
+  "master": "kathleen, or you if you're cooler"
 }
 
 class LittleBrain():
