@@ -95,7 +95,7 @@ class LittleBrain():
     return mood
 
   def improve_bot_response(self, response):
-    ## TODO
+    pass ## TODO
 
 
 if __name__ == '__main__':
