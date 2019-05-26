@@ -13,11 +13,7 @@ from nltk.tokenize import word_tokenize
 
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-
 nltk.data.path.append('./nltk_data/')
-
-## info
-from wikiapi import WikiApi
 
 LB_FACTS = {
   "name": "little brain",
@@ -103,9 +99,5 @@ class LittleBrain():
 
 
 if __name__ == '__main__':
-  wiki = WikiApi()
-
-
-
   lb = LittleBrain()
   lb.talk()

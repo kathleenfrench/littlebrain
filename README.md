@@ -32,3 +32,11 @@ make small_talk
 - create an `.env` file in `/pkg` 
 - put `MTA_KEY=(your api key)`
 - you can register for one [HERE](http://datamine.mta.info/feed-documentation)
+
+#### WIKIPEDIA_FEATURE
+
+- because of a bug in the python wikipedia wrapper, a modification needs to be made on line `389` of the `wikipedia.py` package to provide a parser:
+
+```
+lis = BeautifulSoup(html, 'html.parser').find_all('li')
+```

@@ -3,6 +3,7 @@ import sys
 from pkg import helper, mta
 import requests
 import re
+import wikipedia
 
 def Commands(message):
   try:
@@ -28,6 +29,21 @@ def Commands(message):
       validated = validate_url(link)
       print("redirecting to {}...".format(validated))
       webbrowser.open(validated)
+    elif message[0] == "!wiki": 
+      lookup = ' '.join(message[1:])
+      print("looking up {}...".format(lookup))
+      print("--------------------------------------------------")
+      try:
+        wiki_summary = wikipedia.summary(lookup, sentences=3)
+        print("")
+        print(wiki_summary)
+        print("")
+      except:
+        print("please be more specific, did you possible mean....")
+        print("")
+        wiki_lookup = wikipedia.search(lookup)
+        print(wiki_lookup)
+        print("")
     elif message[0] == "!todo":
       pass
     elif message[0] == "!jira":
