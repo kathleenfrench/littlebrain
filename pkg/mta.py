@@ -5,12 +5,13 @@ import time # imports module for Epoch/GMT time conversion
 import requests
 from google.transit import gtfs_realtime_pb2
 from dotenv import load_dotenv, find_dotenv
-from protobuf_to_dict import protobuf_to_dict
 import hues
 
-## API KEYS
-# load_dotenv(find_dotenv())
-# mta_key = os.environ['MTA_KEY']
+# The MTA data feed uses the General Transit Feed Specification (GTFS) which
+# is based upon Google's "protocol buffer" data format. While possible to
+# manipulate this data natively in python, it is far easier to use the
+# "pip install --upgrade gtfs-realtime-bindings" library which can be found on pypi
+from protobuf_to_dict import protobuf_to_dict
 
 TRAINS = {
   "l8th": 'L01S',
@@ -36,6 +37,9 @@ class MTA(object):
 
     ## REALTIME FEED
     self.feed = gtfs_realtime_pb2.FeedMessage()
+
+    # Because the data feed includes multiple arrival times for a given station
+    # a global list needs to be created to collect the various times
     self.collected_times = []
     self.realtime_data = list()
 
@@ -51,18 +55,6 @@ class MTA(object):
 
     subway_feed = protobuf_to_dict(self.feed)
     self.realtime_data = subway_feed['entity']
-
-# The MTA data feed uses the General Transit Feed Specification (GTFS) which
-# is based upon Google's "protocol buffer" data format. While possible to
-# manipulate this data natively in python, it is far easier to use the
-# "pip install --upgrade gtfs-realtime-bindings" library which can be found on pypi
-
-# subway_feed = protobuf_to_dict(feed) # subway_feed is a dictionary
-# realtime_data = subway_feed['entity'] # train_data is a list
-
-# Because the data feed includes multiple arrival times for a given station
-# a global list needs to be created to collect the various times
-# collected_times = []
 
   # This function takes a converted MTA data feed and a specific station ID and
   # loops through various nested dictionaries and lists to (1) filter out active
@@ -130,7 +122,7 @@ class MTA(object):
     welp... you *just* missed the train. (╯°□°）╯︵ ┻━┻
     Ah well, the next train will arrive at {time.strftime("%I:%M %p", time.localtime(second_arrival_time))}""")
         print("")
-        
+
     else:
       print(f"""
     HURRY UP YOU HAVE {hues.huestr(str(time_until_train)).red.bold.colorized} MINUTE(S) TO GET TO
