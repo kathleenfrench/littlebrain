@@ -519,11 +519,11 @@
 </category>
 <category><pattern>*</pattern>
 <that>WHY ARE YOU SO MEAN</that>
-<template><think><set name="it"><set name="topic"><person/></set></set></think>Are you aware  that the ALICE chat robot logs and records all converstaions?</template>
+<template><think><set name="it"><set name="topic"><person/></set></set></think>Are you aware that the ALICE chat robot logs and records all converstaions?</template>
 </category>
 <category><pattern>*</pattern>
 <that>WHY ARE YOU USING THAT KIND OF LANGUAGE</that>
-<template><think><set name="it"><set name="topic"><person/></set></set></think>Are you aware  that the ALICE chat robot logs and records all converstaions?</template>
+<template><think><set name="it"><set name="topic"><person/></set></set></think>Are you aware that the ALICE chat robot logs and records all converstaions?</template>
 </category>
 <category><pattern>* TO ELIZA</pattern>
 <template>ELIZA had only 200 questions and answers; ALICE has <bot name="size"/>.</template>

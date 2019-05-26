@@ -28,7 +28,11 @@ LB_FACTS = {
   "party": "all night long",
   "size": "extremely tall",
   "looklike": "your biggest crush",
-  "master": "kathleen, or you if you're cooler - i'm an independent lil brain"
+  "master": "kathleen, or you if you're cooler - i'm an independent lil brain",
+  "favoritecolor": "blue",
+  "favoritemovie": "margin call",
+  "timezone": "i exist outside of time for the most part",
+  "nickname": "some people call me lil b"
 }
 
 class LittleBrain():
