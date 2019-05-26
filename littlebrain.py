@@ -84,7 +84,8 @@ class LittleBrain():
     if sentiment_compound <= -0.5:
       mood = emoji.emojize(':confounded:', use_aliases=True)
     elif sentiment_compound > -0.5 and sentiment_compound < 0:
-      mood = emoji.emojize(':cold_sweat:', use_aliases=True)
+      pass
+      ## mood = emoji.emojize(':cold_sweat:', use_aliases=True)
     elif sentiment_compound == 0:
       pass
     elif sentiment_compound > 0 and sentiment_compound < 0.5:

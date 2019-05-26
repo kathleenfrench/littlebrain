@@ -45,31 +45,36 @@
 <!-- Load additional AIML set -->
 <learn>aiml/additional/computer.aiml</learn>
 <learn>aiml/additional/20q.aiml</learn>
-<learn>aiml/additional/alice.aiml</learn>
 <learn>aiml/additional/astrology.aiml</learn>
-<learn>aiml/additional/bornin.aiml</learn>
-<learn>aiml/additional/client.aiml</learn>
 <learn>aiml/additional/drphil.aiml</learn>
 <learn>aiml/additional/drugs.aiml</learn>
-<learn>aiml/additional/emotion.aiml</learn>
 <learn>aiml/additional/jokes.aiml</learn>
-<learn>aiml/additional/client-profile.aiml</learn>
-<learn>aiml/additional/movies.aiml</learn>
-<learn>aiml/additional/wordplay.aiml</learn>
 <learn>aiml/additional/horoscope.aiml</learn>
 <learn>aiml/additional/onthisday.aiml</learn>
+<learn>aiml/additional/food.aiml</learn>
+<learn>aiml/additional/movies.aiml</learn>
 <learn>aiml/additional/science.aiml</learn>
-<learn>aiml/additional/bot.aiml</learn>
-<learn>aiml/additional/psychology.aiml</learn>
-<learn>aiml/additional/hangman.aiml</learn>
 <learn>aiml/additional/quizfacts.aiml</learn>
+<learn>aiml/additional/psychology.aiml</learn>
+<learn>aiml/additional/wordplay.aiml</learn>
+
+<!-- <learn>aiml/additional/alice.aiml</learn> -->
+<!-- <learn>aiml/additional/bornin.aiml</learn>
+<learn>aiml/additional/client.aiml</learn>
+<learn>aiml/additional/emotion.aiml</learn>
+<learn>aiml/additional/client-profile.aiml</learn>
+ -->
+<!-- <learn>aiml/additional/bot.aiml</learn> -->
+<!--  -->
+<!-- <learn>aiml/additional/hangman.aiml</learn> -->
+<!-- 
 <learn>aiml/additional/salutations.aiml</learn>
 <learn>aiml/additional/copyme.aiml</learn>
-<learn>aiml/additional/food.aiml</learn>
-<learn>aiml/additional/reduction0.safe.aiml</learn>
+ -->
+<!-- <learn>aiml/additional/reduction0.safe.aiml</learn>
 <learn>aiml/additional/reduction1.safe.aiml</learn>
 <learn>aiml/additional/reduction2.safe.aiml</learn>
-<learn>aiml/additional/reduction4.safe.aiml</learn>
+<learn>aiml/additional/reduction4.safe.aiml</learn> -->
 
 </template>
 </category>
