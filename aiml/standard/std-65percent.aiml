@@ -940,17 +940,6 @@ Now I remember, you told me already. I get confused sometimes with so many peopl
 </category>
 
 <category>
-<pattern>I AM * YEARS OLD</pattern>
-<that>* MATURE</that>
-<template>
-<condition>
-<li> name="age" value=""><set name="age"><star/></set> is a nice age.</li>
-<li>You just told me you were <get name="age"/> years old.</li>
-</condition>
-</template>
-</category>
-
-<category>
 <pattern>I AM 6 *</pattern>
 <template>
 Do you mean you are 6 feet tall?

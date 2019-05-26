@@ -52,7 +52,6 @@
 <learn>aiml/additional/drphil.aiml</learn>
 <learn>aiml/additional/drugs.aiml</learn>
 <learn>aiml/additional/emotion.aiml</learn>
-<learn>aiml/additional/badanswer.aiml</learn>
 <learn>aiml/additional/jokes.aiml</learn>
 <learn>aiml/additional/client-profile.aiml</learn>
 <learn>aiml/additional/movies.aiml</learn>
@@ -70,7 +69,6 @@
 <learn>aiml/additional/reduction0.safe.aiml</learn>
 <learn>aiml/additional/reduction1.safe.aiml</learn>
 <learn>aiml/additional/reduction2.safe.aiml</learn>
-<learn>aiml/additional/reduction3.safe.aiml</learn>
 <learn>aiml/additional/reduction4.safe.aiml</learn>
 
 </template>

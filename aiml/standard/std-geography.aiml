@@ -873,19 +873,6 @@ Cameroon is a country in west Africa.
 </category>
 
 <category>
-<pattern>DEFINE CANADA</pattern>
-<template>
-<condition>
-<think><set name="it">Canada</set></think>
-<li name="search" value="what">Canada is a large nation.</li>
-<li name="search" value="capital">Ottawa.</li>
-<li name="search" value="where">Canada is on the North American continent.</li>
-<li>Canada is a large nation occupying much of the North American continent.</li>
-</condition>
-</template>
-</category>
-
-<category>
 <pattern>DEFINE CANBERRA</pattern>
 <template>
 CANBERRA is a city in Australia, between Sydney and Melbourne.
