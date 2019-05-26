@@ -18,6 +18,9 @@ def Commands(message):
       print("let me show you where {} is...".format(location))
       webbrowser.open("https://www.google.co.in/maps?q={0}".format(location))
     elif message[0] == "!mta":
+      ## train line single char input, for ex: l
+      ## train_station more colloqual, TODO: to standardize/clean inputs, right now
+      ## only lorimer, l8th work
       train_line = message[1].lower()
       train_station = message[2].lower()
       mta.MTA().get_next_arrival_time(train_line, train_station)
@@ -30,8 +33,6 @@ def Commands(message):
     elif message[0] == "!bored":
       pass
     elif message[0] == "!news":
-      pass
-    elif message[0] == "!whodat":
       pass
     elif message[0] == "!pw":
       pass
