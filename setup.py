@@ -9,11 +9,14 @@ with open(path.join(current_dir, path.join(current_dir, 'README.md')), encoding=
 
 setup(
   name='littlebrain',
+  version='0.0.1',
   packages=find_packages(),
   package_data={'':['*.aiml']},
   include_package_data=True,
+  description='a friendly chatbot/assistant with a bag of tricks',
   long_description=long_description,
   long_description_content_type='text/markdown',
+  url='https://github.com/kathleenfrench/littlebrain',
   author='kathleen french',
   keywords=['chatbot', 'terminal', 'cli', 'aiml', 'assistant', 'python']
 )
