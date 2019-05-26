@@ -1,8 +1,6 @@
 import os, webbrowser
 import sys
-# sys.path.append("pkg/")
-# import helper
-from pkg import helper
+from pkg import helper, mta
 import requests
 
 def Commands(message):
@@ -19,6 +17,10 @@ def Commands(message):
       location = ' '.join(message[1:])
       print("let me show you where {} is...".format(location))
       webbrowser.open("https://www.google.co.in/maps?q={0}".format(location))
+    elif message[0] == "!mta":
+      train_line = message[1].lower()
+      train_station = message[2].lower()
+      mta.MTA().get_next_arrival_time(train_line, train_station)
     elif message[0] == "!todo":
       pass
     elif message[0] == "!jira":
