@@ -135,6 +135,6 @@ class MTA(object):
     else:
       print(f"""
     HURRY UP YOU HAVE {hues.huestr(str(time_until_train)).red.bold.colorized} MINUTE(S) TO GET TO
-    {station.upper()} IF YOU WANT TO GET HOME!
+    {station.upper()} IF YOU WANT TO CATCH THE TRAIN!
     THE TRAIN GETS IN AT {time.strftime("%I:%M %p", time.localtime(nearest_arrival_time))}""")
       print("")
