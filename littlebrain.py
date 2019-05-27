@@ -71,6 +71,8 @@ class LittleBrain():
         else:
           bot_response = self.kernel.respond(message)
           # self.improve_bot_response(bot_response)
+          if bot_response == "":
+            bot_response = "no comment"
 
           if mood is None:
             print(self.t.blue(bot_response).lower().strip())
