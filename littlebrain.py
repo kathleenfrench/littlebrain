@@ -6,6 +6,7 @@ from blessings import Terminal
 import time, webbrowser, datetime
 import requests
 import emoji
+from autocorrect import spell
 
 import nltk
 from nltk.corpus import stopwords, wordnet
@@ -51,6 +52,8 @@ class LittleBrain():
 
     while True:
         message = input(">> ")
+        ## add spell check to user input to mitigate some faulty aiml responses
+        message = " ".join([spell(w) for w in (message.split())])
         split_message = message.split()
 
         mood = self.score_input_sentiment(message)
