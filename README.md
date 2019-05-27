@@ -17,7 +17,7 @@ make small_talk
 - to save your progress and help grow his brain say `!save`
 - to leave, just tell him `bye`
 
-### BUILT-IN FEATURES
+### BUILT-IN FEATURES (WIP)
 ```
 !save --> save the current state of your littlebrain
 !whereis <PLACE> --> have littlebrain redirect you to google maps
