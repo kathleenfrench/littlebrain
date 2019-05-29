@@ -4,6 +4,7 @@ from pkg import helper, mta
 import requests
 import re
 import wikipedia
+import datetime
 
 def Commands(message):
   try:
@@ -44,6 +45,9 @@ def Commands(message):
         wiki_lookup = wikipedia.search(lookup)
         print(wiki_lookup)
         print("")
+    elif message[0] == "!today":
+      today = "today is {0}".format(datetime.datetime.utcnow().date().strftime('%Y-%m-%d'))
+      print(today)
     elif message[0] == "!todo":
       pass
     elif message[0] == "!jira":

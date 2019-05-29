@@ -53,26 +53,22 @@ class LittleBrain():
     while True:
         message = input(">> ")
         ## add spell check to user input to mitigate some faulty aiml responses
-        message = " ".join([spell(w) for w in (message.split())])
-        split_message = message.split()
+        cleanedmessage = " ".join([spell(w) for w in (message.split())])
+        mood = self.score_input_sentiment(cleanedmessage)
 
-        mood = self.score_input_sentiment(message)
-
-        if message == "quit" or message == "exit" or message == "bye" or message == "gtg" or message == "ok bye": # exit from chat
+        if cleanedmessage == "quit" or cleanedmessage == "exit" or cleanedmessage == "bye" or cleanedmessage == "gtg" or cleanedmessage == "ok bye": # exit from chat
           print(self.t.blue("k bye..."))
           exit()
-        elif message == "save" or message == "!save":
+        elif cleanedmessage == "save" or message == "!save":
           self.kernel.saveBrain("bot_brain.brn")
-        elif message == "help":
+        elif cleanedmessage == "help":
           helper.Features()
-        elif "what's today" in message:
-          today = "today is {0}".format(datetime.datetime.utcnow().date().strftime('%Y-%m-%d'))
-          print(today)
-        # if the message is a command
+        ## need to use 'message' here because the spellchecker strips special chars
         elif message[:1] == "!":
+          split_message = message.split()
           cmds.Commands(split_message)
         else:
-          bot_response = self.kernel.respond(message)
+          bot_response = self.kernel.respond(cleanedmessage)
           # self.improve_bot_response(bot_response)
           if bot_response == "":
             bot_response = "no comment"
