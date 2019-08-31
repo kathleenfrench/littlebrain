@@ -1,6 +1,6 @@
 aiml==0.9.2
 attrs==19.1.0
-autocorrect=0.3.0
+autocorrect==0.3.0
 beautifulsoup4==4.7.1
 blessed==1.15.0
 blessings==1.7
@@ -29,7 +29,7 @@ lxml==4.3.3
 MarkupSafe==1.1.1
 mathparse==0.1.2
 murmurhash==1.0.2
-nltk==3.4.1
+nltk>=3.4.5
 numpy==1.16.3
 Pint==0.9
 pipreqs==0.4.9
@@ -42,7 +42,7 @@ pyquery==1.4.0
 pyrsistent==0.15.2
 python-dateutil==2.7.5
 python-dotenv==0.10.2
-python-engineio==3.5.2
+python-engineio>=3.9.0
 python-socketio==4.0.2
 PyYAML==5.1
 requests==2.22.0
@@ -62,5 +62,5 @@ wasabi==0.2.2
 wcwidth==0.1.7
 Werkzeug==0.15.4
 wikiapi==1.2.5
-wikipedia=1.4.0
+wikipedia==1.4.0
 yarg==0.1.9
