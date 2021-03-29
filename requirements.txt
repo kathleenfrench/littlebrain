@@ -37,7 +37,7 @@ plac==0.9.6
 preshed==2.0.1
 protobuf==3.7.1
 protobuf3-to-dict==0.1.5
-Pygments==2.4.1
+Pygments==2.7.4
 pyquery==1.4.0
 pyrsistent==0.15.2
 python-dateutil==2.7.5
